@@ -4,22 +4,21 @@ import jakarta.persistence.*;
 
 import java.util.List;
 
-
 @Entity
 @Table(name = "account")
 public class Account {
     @Id
     @Column(columnDefinition = "varchar(50)", nullable = false)
     private String account_id;
-    @Column(columnDefinition = "varchar(50)",nullable = false)
+    @Column(columnDefinition = "varchar(50)", nullable = false)
     private String full_name;
-    @Column(columnDefinition = "varchar(50)",nullable = false)
+    @Column(columnDefinition = "varchar(50)", nullable = false)
     private String password;
-    @Column(columnDefinition = "varchar(50)")
+    @Column(columnDefinition = "varchar(50)", nullable = false)
     private String email;
-    @Column(columnDefinition = "varchar(50)")
+    @Column(columnDefinition = "varchar(50)", nullable = false)
     private String phone;
-    @Column(columnDefinition = "tinyint(4)")
+    @Column(columnDefinition = "tinyint(4)",nullable = false)
     private Integer status;
     @OneToMany(mappedBy = "account")
     private List<GrantAccess> grantAccessList;
