@@ -5,7 +5,7 @@
     <title>UpdateAccount</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 <%
@@ -17,14 +17,14 @@
     <ul>
         <li><a href="login?action=info" methods="get">Information Account</a></li>
         <li><a href="login?action=listRole">List role</a></li>
-        <% if(grant_accessLogin.equals("admin")){%>
+        <% if (grant_accessLogin.equals("admin")) {%>
         <li><a href="login?action=listAllAccount">List Account</a></li>
         <%}%>
         <li><a href="index.jsp">Log out</a></li>
     </ul>
 </div>
 <!-- Nội dung chính -->
-<div >
+<div>
     <h1>Update Information</h1>
     <form id="formAddAcc" action="login?action=updateAccount" method="post">
         <label for="accountID">Account ID</label>
@@ -37,7 +37,7 @@
         <input type="text" id="password" name="password" value="<%=accUpdate.getPassword()%>"/> <br>
         <label for="phone">Phone</label>
         <input type="text" id="phone" name="phone" value="<%=accUpdate.getPhone()%>"/> <br>
-        <button type="submit" id="addBtn" >UPDATE ACCOUNT</button>
+        <button type="submit" id="addBtn">UPDATE ACCOUNT</button>
     </form>
 </div>
 
