@@ -1,15 +1,8 @@
 package chanh.com.entities;
 
 import jakarta.persistence.*;
-
 import java.time.LocalDate;
 
-///* CREATE TABLE IF NOT EXISTS `log` (
-//  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-//  `account_id` varchar(50) NOT NULL,
-//  `login_time` datetime NOT NULL DEFAULT current_timestamp(),
-//  `logout_time` datetime NOT NULL DEFAULT current_timestamp(),
-//  `notes` varchar(250) NOT NULL DEFAULT '',
 @Entity
 @Table(name = "log")
 public class Logs {
