@@ -6,7 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
+//ThamKhao
 public class GrantAccessRepository {
     public String getRoleOfGrantAccessLoginById(String accountID) throws SQLException, ClassNotFoundException {
         String role = null;

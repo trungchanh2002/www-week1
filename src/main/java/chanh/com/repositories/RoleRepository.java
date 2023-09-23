@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
+//ThamKhao
 public class RoleRepository {
     public List<Role> getListRoleForAccount(String account_ID) throws SQLException, ClassNotFoundException {
         Connection connection;
