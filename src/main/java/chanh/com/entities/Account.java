@@ -4,6 +4,14 @@ import jakarta.persistence.*;
 
 import java.util.List;
 
+@NamedQueries({
+        @NamedQuery(name = "Account.getAccountById", query = "from Account a where a.account_id = :account_id"),
+        @NamedQuery(name = "Account.getAllAccount", query = "SELECT a FROM Account a"),
+        @NamedQuery(name = "Account.getAccountByName", query = "from Account a where a.full_name = :full_name"),
+        @NamedQuery(name = "Account.deleteAccountById", query = "DELETE FROM Account a WHERE a.account_id = :account_id"),
+        @NamedQuery(name = "Account.updateAccountById", query = "UPDATE Account a SET a.full_name = :full_name, a.password = :password, a.email = :email, a.phone = :phone, a.status = :status WHERE a.account_id = :account_id"
+        )
+})
 @Entity
 @Table(name = "account")
 public class Account {
@@ -18,7 +26,7 @@ public class Account {
     private String email;
     @Column(columnDefinition = "varchar(50)", nullable = false)
     private String phone;
-    @Column(columnDefinition = "tinyint(4)",nullable = false)
+    @Column(columnDefinition = "tinyint(4)", nullable = false)
     private Integer status;
     @OneToMany(mappedBy = "account")
     private List<GrantAccess> grantAccessList;
